@@ -1,1 +1,1 @@
-# RustFunctionalLanguage
+# Rust Functional Language
