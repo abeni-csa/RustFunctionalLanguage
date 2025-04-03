@@ -84,7 +84,16 @@ fn main() {
             hight: 12,
         },
     ];
+    let mut sort_opration = vec![];
+    let value = String::from("Closure called");
 
-    list_rect.sort_by_key(|r| r.hight);
+    list_rect.sort_by_key(|r| {
+        sort_opration.push(value.clone());
+        r.hight
+    });
+    list_rect.sort_by_key(|r| {
+        sort_opration.push(value.clone());
+        r.width
+    });
     println!("{list_rect:#?}");
 }
