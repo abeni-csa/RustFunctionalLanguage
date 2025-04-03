@@ -1,8 +1,6 @@
 use examle::call_me;
 use std::thread;
-
 mod examle;
-
 #[derive(Debug, PartialEq, Clone, Copy)]
 enum ShirtColor {
     Red,
@@ -95,5 +93,11 @@ fn main() {
         sort_opration.push(value.clone());
         r.width
     });
+    let mut num_sort_opration = 0;
     println!("{list_rect:#?}");
+    list_rect.sort_by_key(|x| {
+        num_sort_opration += 1;
+        x.width
+    });
+    println!("{list_rect:#?}. sorted in {num_sort_opration} oprations");
 }
