@@ -7,7 +7,7 @@ pub fn call_me() {
     let _str = example_closure(String::from("Some String"));
     let mut list = vec![1, 2, 3, 4];
     add_one_v1(1);
-    print!("Before defining the closure: {list:?}");
+    println!("Before defining the closure: {list:?}");
     let mut borrows_mutable = || list.push(7);
     borrows_mutable();
     println!("After calling clousure: {list:?}");
